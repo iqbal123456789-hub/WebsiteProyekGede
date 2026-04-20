@@ -1,0 +1,145 @@
+header {
+    font-family: trebuchet ms, sans-serif;
+}
+body {
+    background: linear-gradient(to left, #cd4f30, #feb47b);
+}
+.ikinavbar-horizontal {
+    background-color: gray; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+.ikinavbar-horizontal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: flex-start; 
+}
+.ikinavbar-horizontal a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: white; 
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.ikinavbar-horizontal a:hover {
+    background-color: #111211;
+    color: #ffffff;
+    text-decoration: none;
+}
+.boxheader {
+    width: 800px;
+    margin-left: 330px ;
+    padding: 25px;
+    background-color: rgb(137, 58, 5);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.608);
+    text-align: center;
+    color: white;
+    font-family: Lucida Calligraphy, cursive;
+    font-size: 70px;
+}
+.Judul {
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+}
+.gambar-portofolio {
+    width: 100%;             /* Gambar akan mengisi lebar ruang yang tersedia */
+    max-width: 500px;        /* Tapi maksimal besarnya hanya 500px agar tidak terlalu raksasa di PC */
+    height: auto;            /* Tingginya menyesuaikan agar gambar tidak gepeng/distorsi */
+    border-radius: 10px;     /* Opsional: Membuat ujung gambar menjadi tumpul/melengkung */
+    margin-top: 15px;        /* Memberi jarak antara teks "Portofolio" dan gambarnya */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opsional: Memberi bayangan pada gambar */
+}
+.gambar-portofolio2 {
+    width: 100%;             /* Gambar akan mengisi lebar ruang yang tersedia */
+    max-width: 500px;        /* Tapi maksimal besarnya hanya 500px agar tidak terlalu raksasa di PC */
+    height: auto;            /* Tingginya menyesuaikan agar gambar tidak gepeng/distorsi */
+    border-radius: 10px;     /* Opsional: Membuat ujung gambar menjadi tumpul/melengkung */
+    margin-top: 15px;        /* Memberi jarak antara teks "Portofolio" dan gambarnya */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opsional: Memberi bayangan pada gambar */
+}
+@media screen and (max-width: 1024px) {
+    .boxheader {
+        width: 90%;
+        padding: 20px;
+    }
+}
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-areas: 
+    "header" 
+    "nav"
+    "content"
+    "ads"
+    "footer";
+    grid-template-rows: auto auto 1fr auto auto;
+    padding: 10px;
+    gap: 10px;
+}
+nav {
+    grid-area: nav;
+    background-color: gray;
+    color: white;
+    text-align: left;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 28px;
+}
+.content {
+    grid-area: content;
+    background-color: bisque;
+    text-align: center;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 40px;
+}
+.ads {
+    grid-area: ads;
+    background-color: gray;
+    color: white;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 24px;
+    text-align: left;
+}
+footer {
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+/*mobile*/
+@media screen and (max-width:600px) {
+    @media screen and (max-width: 600px) {
+    .container {
+        /* Di HP wajib menumpuk satu kolom ke bawah agar tidak sesak */
+        grid-template-areas: 
+            "header"
+            "nav"
+            "content"
+            "ads"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+    .boxheader {
+        width: 95%;        /* Kotak hampir memenuhi layar */
+        margin: 10px auto;
+        font-size: 35px;    /* Font judul jadi lebih kecil agar tidak patah */
+        padding: 15px;
+    }
+    .ikinavbar-horizontal ul {
+        flex-direction: column; /* Menu navbar jadi berderet ke bawah */
+        text-align: center;
+    }
+    .ikinavbar-horizontal a {
+        padding: 10px;      /* Kurangi padding agar hemat ruang */
+    }
+    .content {
+        font-size: 24px;    /* Ukuran teks konten disesuaikan */
+    }
+    .gambar-portofolio, .gambar-portofolio2 {
+        max-width: 100%;    /* Gambar memenuhi lebar HP */
+    }
+}
+}
