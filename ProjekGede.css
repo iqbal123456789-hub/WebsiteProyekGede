@@ -28,16 +28,22 @@ body {
     color: #ffffff;
     text-decoration: none;
 }
+.hero {
+    background-color: transparent;
+    background-image: url('https://images.ctfassets.net/3s5io6mnxfqz/6MYZlZZY1f3tkI9pP721hp/97623e0247c45bc86a52b1e6e7f76d1b/AdobeStock_393500277.jpeg?w=1920');
+    background-size: cover;
+    background-position: center;
+}
 .boxheader {
     width: 800px;
     margin-left: 330px ;
     padding: 25px;
-    background-color: rgb(137, 58, 5);
-    border-radius: 15px;
+    background-color: rgb(36, 40, 36);
+    border-radius: 75px;
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.608);
     text-align: center;
-    color: white;
-    font-family: Lucida Calligraphy, cursive;
+    color: rgb(206, 176, 121);
+    font-family: adobe ghotic std, sans-serif;
     font-size: 70px;
 }
 .Judul {
@@ -53,12 +59,12 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opsional: Memberi bayangan pada gambar */
 }
 .gambar-portofolio2 {
-    width: 100%;             /* Gambar akan mengisi lebar ruang yang tersedia */
-    max-width: 500px;        /* Tapi maksimal besarnya hanya 500px agar tidak terlalu raksasa di PC */
-    height: auto;            /* Tingginya menyesuaikan agar gambar tidak gepeng/distorsi */
-    border-radius: 10px;     /* Opsional: Membuat ujung gambar menjadi tumpul/melengkung */
-    margin-top: 15px;        /* Memberi jarak antara teks "Portofolio" dan gambarnya */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opsional: Memberi bayangan pada gambar */
+    width: 100%;        
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;     
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /
 }
 @media screen and (max-width: 1024px) {
     .boxheader {
@@ -83,9 +89,10 @@ nav {
     grid-area: nav;
     background-color: gray;
     color: white;
-    text-align: left;
+    text-align: center;
     font-family: Trebuchet MS, sans-serif;
     font-size: 28px;
+    border-radius: 10px;
 }
 .content {
     grid-area: content;
@@ -94,6 +101,18 @@ nav {
     font-family: Trebuchet MS, sans-serif;
     font-size: 40px;
 }
+.boxpesan {
+    font-size: 30px;
+    color: rgb(206, 176, 121);
+    margin-top: 20px;
+    background-color: rgb(36, 40, 36);
+    width: 300px;
+    padding: 25px;
+    margin-left: 570px;
+    border-radius: 75px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.608);
+    text-align: center;
+}
 .ads {
     grid-area: ads;
     background-color: gray;
@@ -101,13 +120,15 @@ nav {
     font-family: Trebuchet MS, sans-serif;
     font-size: 24px;
     text-align: left;
+    border-radius: 10px;
 }
 footer {
     grid-area: footer;
-    background-color: black;
+    background-color: rgb(36, 40, 36);
     color: white;
     font-size: 24px;
     text-align: center;
+    padding: 30px 20px;
 }
 /*mobile*/
 @media screen and (max-width:600px) {
@@ -124,8 +145,13 @@ footer {
     }
     .boxheader {
         width: 95%;        /* Kotak hampir memenuhi layar */
-        margin: 10px auto;
-        font-size: 35px;    /* Font judul jadi lebih kecil agar tidak patah */
+        margin: auto;
+        font-size: 20px;    /* Font judul jadi lebih kecil agar tidak patah */
+        padding: 15px;
+    }
+    .boxpesan {
+        width: 90%;
+        font-size: 18px;    /* Font pesan jadi lebih kecil */
         padding: 15px;
     }
     .ikinavbar-horizontal ul {
@@ -141,5 +167,6 @@ footer {
     .gambar-portofolio, .gambar-portofolio2 {
         max-width: 100%;    /* Gambar memenuhi lebar HP */
     }
-}
+
+    }
 }
