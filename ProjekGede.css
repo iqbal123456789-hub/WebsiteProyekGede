@@ -93,6 +93,10 @@ nav {
     font-family: Trebuchet MS, sans-serif;
     font-size: 28px;
     border-radius: 10px;
+    .Judul {
+        font-size: 28px;
+        color: rgb(231, 212, 176);
+    }
 }
 .content {
     grid-area: content;
@@ -132,7 +136,6 @@ footer {
 }
 /*mobile*/
 @media screen and (max-width:600px) {
-    @media screen and (max-width: 600px) {
     .container {
         /* Di HP wajib menumpuk satu kolom ke bawah agar tidak sesak */
         grid-template-areas: 
@@ -144,15 +147,18 @@ footer {
         grid-template-columns: 1fr;
     }
     .boxheader {
-        width: 95%;        /* Kotak hampir memenuhi layar */
-        margin: auto;
-        font-size: 20px;    /* Font judul jadi lebih kecil agar tidak patah */
-        padding: 15px;
+        width: 90%;             /* Mengubah lebar menjadi dinamis mengikuti ukuran layar HP */
+        margin: 20px auto;      /* Membatalkan margin-left 330px, dan menengahkan kotak secara otomatis */
+        font-size: 35px;        /* Mengecilkan font agar teks tidak patah atau keluar jalur */
+        border-radius: 30px;    /* Mengecilkan lengkungan agar lebih proporsional di layar sempit */
+        padding: 15px;          /* Mengurangi jarak agar tidak memakan terlalu banyak tempat */
     }
     .boxpesan {
         width: 90%;
-        font-size: 18px;    /* Font pesan jadi lebih kecil */
+        margin: 10px auto;      /* KUNCI: Menarik kotak ke tengah persis (kiri-kanan) */
+        font-size: 18px;        /* Font pesan jadi lebih kecil agar nyaman dibaca */
         padding: 15px;
+        box-sizing: border-box; /* Pengaman: Agar padding tidak membuat ukuran kotak melebar lebih dari 90% */
     }
     .ikinavbar-horizontal ul {
         flex-direction: column; /* Menu navbar jadi berderet ke bawah */
@@ -166,7 +172,5 @@ footer {
     }
     .gambar-portofolio, .gambar-portofolio2 {
         max-width: 100%;    /* Gambar memenuhi lebar HP */
-    }
-
     }
 }
