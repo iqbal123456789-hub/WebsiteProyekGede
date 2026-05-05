@@ -43,12 +43,16 @@ body {
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.608);
     text-align: center;
     color: rgb(206, 176, 121);
-    font-family: adobe ghotic std, sans-serif;
+    font-family: blackadder itc, cursive;
     font-size: 70px;
 }
 .Judul {
     font-size: 60px;
     color: rgb(0, 0, 0);
+}
+.Juduldeskripsi {
+    font-size: 35px;
+    color: rgb(255, 255, 255);
 }
 .gambar-portofolio {
     width: 100%;             /* Gambar akan mengisi lebar ruang yang tersedia */
@@ -116,6 +120,11 @@ nav {
     border-radius: 75px;
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.608);
     text-align: center;
+    transition: transform 0.3s;
+}
+.boxpesan:hover {
+    background-color: rgb(118, 116, 112);
+    transform: scale(1.1);
 }
 .ads {
     grid-area: ads;
@@ -160,6 +169,10 @@ footer {
         padding: 15px;
         box-sizing: border-box; /* Pengaman: Agar padding tidak membuat ukuran kotak melebar lebih dari 90% */
     }
+    .Juduldeskripsi {
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+}
     .ikinavbar-horizontal ul {
         flex-direction: column; /* Menu navbar jadi berderet ke bawah */
         text-align: center;
