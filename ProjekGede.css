@@ -2,8 +2,7 @@ header {
     font-family: trebuchet ms, sans-serif;
 }
 body {
-    background: linear-gradient(to left, #cd4f30, #feb47b);
-}
+    background: white;
 .ikinavbar-horizontal {
     background-color: gray; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
